@@ -1,0 +1,46 @@
+﻿.file-upload
+  {
+     display : inline-block;
+  overflow: hidden;  
+  position: relative;  
+  text-align:center !important;
+  vertical-align: middle;
+/* Cosmetics */
+  border: 1px solid #fff;
+  background:#D5D5D5;
+  color: #000; 
+  padding:4px;
+ 
+/* browser can do it */
+  /*border-radius: 6px;
+ -moz-border-radius: 6px;
+  text-shadow: #000 1px 1px 2px;
+ -webkit-border-radius: 6px;*/
+   } 
+  
+   /* The button size */ 
+ .file-upload { height: 1.3em; }
+ .file-upload,.file-upload span { width: 3.5em; } 
+  
+ .file-upload input
+  {
+ position: absolute;
+ top: 0;
+ left: 0;
+ margin: 0;
+ font-size: 11px;
+/* Loses tab index in webkit if width is set to 0 */
+ opacity: 0;
+ filter: alpha(opacity=0);
+ }
+ 
+ .file-upload strong { font: normal 16px Tahoma,sans-serif;text-align:center;vertical-align:middle; margin-left:28px; } 
+ 
+ .file-upload span
+  {
+ position: absolute;
+ top: 0; left: 0;
+ display: inline-block;
+/* Adjust button text vertical alignment */
+ padding-top: .15em;
+  } 

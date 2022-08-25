@@ -1,0 +1,17 @@
+﻿  .img:hover
+        {
+            cursor:pointer;
+            height:500px;
+            width:1000px;
+            transform:scale(1.1);
+            -ms-transform:scale(1.6);
+            -moz-transform:scale(1.1);
+            -webkit-transform:scale(1.1);
+            -o-transform:scale(1.1);
+            box-shadow:3px 3px 1px #111111;
+        }
+        .rot:hover
+        {
+            transition:width 2s,height 2s,transform 2s;
+            -webkit-transition:width 2s,height 2s,-webkit-transform 2s;
+        }

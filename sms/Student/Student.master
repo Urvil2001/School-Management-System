@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Student.master.cs" Inherits="Student_Student" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets/css/cs-skin-elastic.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="../assets/scss/style.css">
+    <link href="../assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+
+    <title>Student's Site</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <!-- Left Panel -->
+
+<aside id="left-panel" class="left-panel">
+    <nav class="navbar navbar-expand-sm navbar-default">
+
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#">Student Panel</a>
+            <a class="navbar-brand hidden" href="#">S</a>
+        </div>
+
+        <div id="main-menu" class="main-menu collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+                <h3 class="menu-title">Menu</h3><!-- /.menu-title -->
+               <li>
+                    <a href="Attendance.aspx"> <i class="menu-icon ti-bar-chart"></i>Attendance</a>
+                </li>
+               
+                
+               
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon ti-comment-alt"></i>Complaint</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon ti-comment-alt"></i><a href="Complaint.aspx">Any Complaint</a></li>
+                        <li><i class="menu-icon ti-comment-alt"></i><a href="ComplaintStatus.aspx">Status</a></li>
+                       
+                    </ul>
+                </li>
+                <li>
+                    <a href="FeesPayment.aspx"> <i class="menu-icon ti-money"></i>Fees Payment</a>
+                </li>
+                 <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon fa fa-bell"></i>Leave</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon fa fa-bell"></i><a href="LeaveApplication.aspx">Apply For Leave</a></li>
+                        <li><i class="menu-icon fa fa-bell"></i><a href="LeaveStatus.aspx">Leave Status</a></li>
+                       
+                    </ul>
+                </li>
+                 <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon ti-book"></i>Study Section</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon ti-book"></i><a href="ViewStudyMatetrial.aspx">Study Material</a></li>
+                        <li><i class="menu-icon ti-book"></i><a href="AssignmentDetails.aspx">Assignment Details</a></li>
+                        <li><i class="menu-icon ti-book"></i><a href="UploadAssignemnt.aspx">Upload Assignment</a></li>
+                       
+                    </ul>
+                </li>
+                <li>
+                    <a href="ViewAnnouncement.aspx"> <i class="menu-icon ti-announcement"></i>Announcement</a>
+                </li>
+                <li>
+                    <a href="YourResult.aspx"> <i class="menu-icon ti-cup"></i>Result</a>
+                </li>
+                <li>
+                    <a href="../Logout.aspx"> <i class="menu-icon ti-lock"></i>Logout</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</aside>
+<!-- /#left-panel -->
+
+<!-- Left Panel -->
+
+<!-- Right Panel -->
+
+<div id="right-panel" class="right-panel">
+
+    <!-- Header-->
+    <header id="header" class="header">
+
+        <div class="header-menu">
+
+            <div class="col-sm-7">
+                <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks" style="margin-top:13px"></i></a>
+
+                <div class="header-left">
+                        
+                        <div class="dropdown for-message">
+                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="message"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ti-bell"></i>
+                            <span class="count bg-primary"><asp:Label ID="notification1" runat="server"></asp:Label></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="message" style="border:1px solid">
+                            <p class="red">You have <asp:Label ID="notification2" runat="server"></asp:Label> Announcement</p>
+
+                            <asp:Repeater ID="r1" runat="server">
+                            <ItemTemplate>
+                            <a class="dropdown-item media" href="ViewAnnouncement.aspx" style="border-style:solid;border-width:1px;border-color:Gray">
+                                <span class="message media-body">
+                                    
+                                    
+                                        <p><%#gettwenrycharacters(Eval("description")) %></p>
+                                </span>
+                            </a>
+                            </ItemTemplate>
+                            </asp:Repeater>
+                           
+                        </div>
+                    </div>
+
+
+                  <%--  <button class="search-trigger"><i class="fa fa-search"></i></button>
+                    <div class="form-inline">
+                        <form class="search-form">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
+                                   aria-label="Search">
+                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                        </form>
+                    </div>
+--%>
+                   
+                   
+                </div>
+            </div>
+
+            
+        </div>
+
+    </header>
+    <!-- /header -->
+    <!-- Header-->
+
+    
+
+    <div class="content mt-3">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+ </div>
+</div>
+
+<!-- Right Panel -->
+
+<script src="../assets/js/vendor/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/main.js"></script>
+
+
+<script src="../assets/js/lib/chart-js/Chart.bundle.js"></script>
+<script src="../assets/js/dashboard.js"></script>
+<script src="../assets/js/widgets.js"></script>
+<script src="../assets/js/lib/vector-map/jquery.vmap.js"></script>
+<script src="../assets/js/lib/vector-map/jquery.vmap.min.js"></script>
+<script src="../assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
+<script src="../assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
+<script>
+    (function ($) {
+        "use strict";
+
+        jQuery('#vmap').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#1de9b6',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#1de9b6', '#03a9f5'],
+            normalizeFunction: 'polynomial'
+        });
+    })(jQuery);
+</script>
+   
+</body>
+</html>

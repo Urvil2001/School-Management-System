@@ -1,0 +1,59 @@
+﻿.CS
+{
+background-color:thistle;
+color: red;
+border: 1px solid #AB00CC;
+font: Verdana 10px;
+padding: 1px 4px;
+font-family: Palatino Linotype, Arial, Helvetica, sans-serif;
+border-radius:5px;
+}
+
+div.custom_file_upload {
+            width: 140px;
+            height: 10px;
+            margin: 20px 0;
+}
+div.file_upload {
+            width: 160px;
+            height: 35px;
+            background: #7abcff;
+            background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee));
+            background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+            background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+            background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+            background: linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 );
+            display: inline;
+            position: absolute;
+            overflow: hidden;
+            cursor: pointer;        
+            -webkit-border-top-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+            -moz-border-radius-bottomright: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #FFF;
+            text-align: center;
+            padding-top: 8px;
+}
+div.file_upload:before {
+            content: 'Choose File to Upload';
+            position: absolute;
+            left: 0; right: 0;
+            text-align: center;     
+            cursor: pointer;
+}
+div.file_upload input {
+            position: relative;
+            height: 30px;
+            width: 250px;
+            display: inline;
+            cursor: pointer;
+            opacity: 0;
+    top: 2px;
+    left: 13px;
+}
+   

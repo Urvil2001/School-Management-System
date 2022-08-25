@@ -1,0 +1,26 @@
+﻿.mydropdownlist
+{
+color: #fff;
+font-size: 20px;
+padding: 5px 10px;
+border-radius: 5px;
+background-color: #cc2a41;
+font-weight: bold;
+}
+.dd1
+{
+     color:Snow;
+            background-color:DarkOrchid;
+            font-family:Comic Sans MS;
+            font-size:large;
+            font-style:italic;
+}
+.stydrop
+        {
+            border:2px solid #7d6754;
+            border-radius:10px;
+            height:35px;
+            width:auto;
+            background-color:thistle;
+            font-family:Century Schoolbook;
+        }
